@@ -1,0 +1,458 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Skills | Chelsea's Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .skills-section {
+            max-width: 1100px;
+            margin: 70px auto;
+            padding: 0 25px;
+        }
+
+        .skills-section .tag {
+            color: #a78bfa;
+            letter-spacing: 3px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .skills-section h1 {
+            font-size: 42px;
+            margin: 20px 0;
+        }
+
+        .skills-section h1 span {
+            color: #a78bfa;
+        }
+
+        .skills-intro {
+            margin-bottom: 35px;
+            line-height: 1.8;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+            align-items: start;
+        }
+
+        .skill-card {
+            background: #151421;
+            border: 1px solid #302d40;
+            border-radius: 15px;
+            padding: 25px;
+            transition: border-color 0.3s, transform 0.3s;
+            min-width: 0;
+        }
+
+        .skill-card:hover {
+            border-color: #a78bfa;
+            transform: translateY(-3px);
+        }
+
+        .skill-card[open] {
+            border-color: #a78bfa;
+        }
+
+        .skill-card summary {
+            list-style: none;
+            cursor: pointer;
+        }
+
+        .skill-card summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .skill-icon {
+            font-size: 35px;
+            display: block;
+            margin-bottom: 25px;
+        }
+
+        .skill-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .skill-card summary p {
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .click-hint {
+            color: #a78bfa;
+            font-size: 12px;
+        }
+
+        .skill-details {
+            border-top: 1px solid #39354b;
+            margin-top: 20px;
+            padding-top: 15px;
+        }
+
+        .skill-details h4 {
+            color: #a78bfa;
+            margin: 18px 0 8px;
+        }
+
+        .skill-details p,
+        .skill-details li {
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .skill-details ul {
+            padding-left: 20px;
+        }
+
+        .skill-details pre {
+            background: #0b0a12;
+            padding: 12px;
+            border-radius: 8px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            overflow-wrap: anywhere;
+        }
+
+        .skill-details code {
+            color: #c4b5fd;
+            font-size: 12px;
+        }
+
+        .test-button {
+            background: #a78bfa;
+            color: #151421;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 7px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .test-button:hover {
+            background: #c4b5fd;
+        }
+
+        @media (max-width: 750px) {
+            .skills-container {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .skills-section h1 {
+                font-size: 34px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <a href="index.html" class="logo">Chelsea<span>.</span></a>
+
+        <button class="menu-toggle" id="menu-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false">☰</button>
+
+        <div class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html" class="active">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html" class="nav-button">Contact Me</a>
+        </div>
+    </nav>
+</header>
+
+<main class="skills-section">
+
+    <p class="tag">MY TECHNICAL TOOLKIT</p>
+
+    <h1>Programming <span>Skills</span></h1>
+
+    <p class="skills-intro">
+        Languages and technologies I am learning and practising.
+        Click any skill to discover its concepts, uses and examples.
+    </p>
+
+    <div class="skills-container">
+
+        <!-- C -->
+        <details class="skill-card">
+            <summary>
+                <span class="skill-icon">©️</span>
+                <h3>C</h3>
+                <p>Programming fundamentals and problem solving.</p>
+                <span class="click-hint">Click to explore ↓</span>
+            </summary>
+            <div class="skill-details">
+                <h4>What is C?</h4>
+                <p>C is a procedural language used to develop efficient software.</p>
+                <h4>Key concepts</h4>
+                <ul>
+                    <li>Variables and data types</li>
+                    <li>Operators and conditions</li>
+                    <li>Loops and functions</li>
+                    <li>Arrays and pointers</li>
+                </ul>
+                <h4>What can it build?</h4>
+                <p>Calculators, simple games and system utilities.</p>
+                <h4>Example</h4>
+                <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Hello World!");
+    return 0;
+}</code></pre>
+            </div>
+        </details>
+
+        <!-- C++ -->
+        <details class="skill-card">
+            <summary>
+                <span class="skill-icon">⚙️</span>
+                <h3>C++</h3>
+                <p>Object-oriented programming and logic.</p>
+                <span class="click-hint">Click to explore ↓</span>
+            </summary>
+            <div class="skill-details">
+                <h4>What is C++?</h4>
+                <p>C++ supports procedural and object-oriented programming.</p>
+                <h4>Key concepts</h4>
+                <ul>
+                    <li>Variables and data types</li>
+                    <li>Loops and functions</li>
+                    <li>Classes and objects</li>
+                    <li>Inheritance and pointers</li>
+                </ul>
+                <h4>What can it build?</h4>
+                <p>Games, desktop applications and simulations.</p>
+                <h4>Example</h4>
+                <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Hello World!";
+    return 0;
+}</code></pre>
+            </div>
+        </details>
+
+        <!-- Python -->
+        <details class="skill-card">
+            <summary>
+                <span class="skill-icon">🐍</span>
+                <h3>Python</h3>
+                <p>Programming, data handling and automation.</p>
+                <span class="click-hint">Click to explore ↓</span>
+            </summary>
+            <div class="skill-details">
+                <h4>What is Python?</h4>
+                <p>Python is a versatile language used in automation, data analysis and AI.</p>
+                <h4>Key concepts</h4>
+                <ul>
+                    <li>Variables and data types</li>
+                    <li>Lists and dictionaries</li>
+                    <li>Conditions, loops and functions</li>
+                    <li>File handling</li>
+                    <li>Data analysis and automation</li>
+                </ul>
+                <h4>What can it build?</h4>
+                <p>Data analysis tools, automation scripts and AI applications.</p>
+                <h4>Example</h4>
+                <pre><code>name = "Chelsea"
+print("Hello", name)</code></pre>
+            </div>
+        </details>
+
+        <!-- Visual Basic -->
+        <details class="skill-card">
+            <summary>
+                <span class="skill-icon">🖥️</span>
+                <h3>Visual Basic</h3>
+                <p>Application development and programming basics.</p>
+                <span class="click-hint">Click to explore ↓</span>
+            </summary>
+            <div class="skill-details">
+                <h4>What is Visual Basic?</h4>
+                <p>Visual Basic is used for application development, especially Windows applications.</p>
+                <h4>Key concepts</h4>
+                <ul>
+                    <li>Variables and data types</li>
+                    <li>Conditions and loops</li>
+                    <li>Procedures and functions</li>
+                    <li>Forms and event handling</li>
+                </ul>
+                <h4>What can it build?</h4>
+                <p>Desktop applications, data-entry forms and management systems.</p>
+                <h4>Example</h4>
+                <pre><code>Module Program
+    Sub Main()
+        Console.WriteLine("Hello World!")
+    End Sub
+End Module</code></pre>
+            </div>
+        </details>
+
+        <!-- HTML -->
+        <details class="skill-card">
+            <summary>
+                <span class="skill-icon">🌐</span>
+                <h3>HTML</h3>
+                <p>Creating the structure of web pages.</p>
+                <span class="click-hint">Click to explore ↓</span>
+            </summary>
+            <div class="skill-details">
+                <h4>What is HTML?</h4>
+                <p>HTML defines the structure and content of web pages.</p>
+                <h4>Key concepts</h4>
+                <ul>
+                    <li>Headings and paragraphs</li>
+                    <li>Links and images</li>
+                    <li>Tables and forms</li>
+                    <li>Semantic HTML elements</li>
+                </ul>
+                <h4>What can it build?</h4>
+                <p>Portfolio websites, registration forms and web page structures.</p>
+                <h4>Example</h4>
+                <pre><code>&lt;h1&gt;Welcome!&lt;/h1&gt;
+&lt;p&gt;This is my website.&lt;/p&gt;</code></pre>
+            </div>
+        </details>
+
+        <!-- CSS -->
+        <details class="skill-card">
+            <summary>
+                <span class="skill-icon">🎨</span>
+                <h3>CSS</h3>
+                <p>Styling websites and responsive layouts.</p>
+                <span class="click-hint">Click to explore ↓</span>
+            </summary>
+            <div class="skill-details">
+                <h4>What is CSS?</h4>
+                <p>CSS controls the appearance, design and layout of web pages.</p>
+                <h4>Key concepts</h4>
+                <ul>
+                    <li>Colors, fonts and backgrounds</li>
+                    <li>Margins, padding and borders</li>
+                    <li>Flexbox and CSS Grid</li>
+                    <li>Responsive web design</li>
+                </ul>
+                <h4>What can it build?</h4>
+                <p>Styled portfolios, responsive websites and attractive interfaces.</p>
+                <h4>Example</h4>
+                <pre><code>h1 {
+    color: #a78bfa;
+    text-align: center;
+}</code></pre>
+            </div>
+        </details>
+
+        <!-- SQL -->
+        <details class="skill-card">
+            <summary>
+                <span class="skill-icon">🗄️</span>
+                <h3>SQL</h3>
+                <p>Database management and data queries.</p>
+                <span class="click-hint">Click to explore ↓</span>
+            </summary>
+            <div class="skill-details">
+                <h4>What is SQL?</h4>
+                <p>SQL stands for Structured Query Language. It is used to retrieve, insert, update and manage database records.</p>
+                <h4>Key concepts</h4>
+                <ul>
+                    <li>Creating databases and tables</li>
+                    <li>SELECT, INSERT, UPDATE and DELETE</li>
+                    <li>WHERE and ORDER BY</li>
+                    <li>GROUP BY and aggregate functions</li>
+                    <li>INNER JOIN and other JOIN operations</li>
+                    <li>Primary and foreign keys</li>
+                </ul>
+                <h4>What can it build?</h4>
+                <p>Student records, inventory systems and sales reports.</p>
+                <h4>Example</h4>
+                <pre><code>SELECT *
+FROM Student
+ORDER BY StudentName ASC;</code></pre>
+                <p>This example assumes your table contains a StudentName column.</p>
+            </div>
+        </details>
+
+        <!-- JavaScript -->
+        <details class="skill-card">
+            <summary>
+                <span class="skill-icon">⚡</span>
+                <h3>JavaScript</h3>
+                <p>Interactive websites and dynamic functionality.</p>
+                <span class="click-hint">Click to explore ↓</span>
+            </summary>
+            <div class="skill-details">
+                <h4>What is JavaScript?</h4>
+                <p>JavaScript makes websites interactive and responsive to user actions.</p>
+                <h4>Key concepts</h4>
+                <ul>
+                    <li>Variables and data types</li>
+                    <li>Operators and conditions</li>
+                    <li>Loops and functions</li>
+                    <li>Events and event listeners</li>
+                    <li>DOM manipulation</li>
+                    <li>Form validation</li>
+                    <li>Arrays and objects</li>
+                </ul>
+                <h4>What can it build?</h4>
+                <p>Calculators, interactive portfolios, quizzes and dynamic web applications.</p>
+                <h4>Example</h4>
+                <pre><code>function greet() {
+    alert("Welcome to my portfolio!");
+}</code></pre>
+               
+            </div>
+        </details>
+
+    </div>
+</main>
+
+<footer>
+    <a href="index.html" class="logo">Chelsea<span>.</span></a>
+    <p>Designed with passion by Chelsea Nyariki.</p>
+    <a href="contact.html" class="back-to-top">Get in touch ↗</a>
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+    function greet(event) {
+        event.stopPropagation();
+        alert("Welcome to my portfolio!");
+    }
+
+    // Close the previously opened card when another is selected.
+    document.querySelectorAll(".skill-card").forEach(function(card) {
+        card.addEventListener("toggle", function() {
+            if (card.open) {
+                document.querySelectorAll(".skill-card").forEach(function(otherCard) {
+                    if (otherCard !== card) {
+                        otherCard.open = false;
+                    }
+                });
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
